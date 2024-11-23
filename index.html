@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Stars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #0077cc;
+        }
+        button {
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Stars</h1>
+        <p id="fact">Click the button to learn a fun fact about stars!</p>
+        <button onclick="showFact()">Show Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            "Stars come in a wide range of sizes. The smallest stars, known as red dwarfs, can be as small as 0.1 times the mass of the Sun, while the largest stars, called supergiants, can be over 100 times the mass of the Sun.",
+            "The color of a star indicates its temperature. Blue stars are the hottest, with surface temperatures over 30,000 Kelvin, while red stars are cooler, with temperatures around 3,000 Kelvin.",
+            "Stars have life cycles that include stages such as nebula, main sequence, red giant, and, depending on their mass, they may end as white dwarfs, neutron stars, or black holes.",
+            "Stars shine because of nuclear fusion in their cores, where hydrogen atoms fuse to form helium, releasing energy in the process.",
+            "Many stars are part of binary systems, where two stars orbit a common center of mass. Some systems even have more than two stars.",
+            "The distance to stars is often measured in light-years, which is the distance light travels in one year. The nearest star to Earth, Proxima Centauri, is about 4.24 light-years away.",
+            "Stars often form in clusters. Open clusters are loosely bound and contain a few hundred stars, while globular clusters are tightly bound and can contain hundreds of thousands of stars.",
+            "Stars form in regions of space called molecular clouds or stellar nurseries, where gas and dust collapse under gravity to form new stars.",
+            "Some stars end their lives in spectacular explosions called supernovae, which can outshine entire galaxies for a short period.",
+            "Stars are grouped into constellations, which are patterns that have been identified and named by various cultures throughout history."
+        ];
+
+        function showFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
